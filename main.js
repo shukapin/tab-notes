@@ -10,7 +10,7 @@
     * }
     **/
 
-  const newtab_script = () => {
+  const main_script = () => {
     const THEMES = {
       night: "night",
       day: "day"
@@ -29,7 +29,7 @@
     const _render = () => {
 
       const _renderList = list => {
-        const _makeTitleString = content => content.substr(0, 10).replace(/\n/g, '') || '<span class="empty-string">(EMPTY)</span>'
+        const _makeTitleString = content => content.substr(0, 25).split(/\r\n|\r|\n/)[0] || '<span class="empty-string">(EMPTY)</span>'
         const $ul = document.querySelector('ul')
 
         $ul.innerHTML = list.map((item, index) => {
@@ -201,6 +201,6 @@
     }
   }
   window.addEventListener('load', () => {
-    newtab_script().init()
+    main_script().init()
   })
 })()

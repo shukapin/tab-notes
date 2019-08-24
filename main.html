@@ -7,7 +7,7 @@
   <script type="text/javascript" src="./browser-polyfill.min.js"></script>
   <script type="text/javascript" src="./migration.js"></script>
   <script type="text/javascript" src="./utils.js"></script>
-  <script type="text/javascript" src="./newtab.js"></script>
+  <script type="text/javascript" src="main.js"></script>
   <style>
   .hide { display: none !important; }
 
@@ -55,21 +55,6 @@
     position: fixed;
     left: 12px;
   }
-
-  #addon-author {
-    background: #DD4A68;
-    bottom: 12px;
-    border: 1px solid #DD4A68;
-    color: #fff;
-    font-family: serif;
-    font-size: 10px;
-    font-weight: 600;
-    padding: 2px;
-    position: fixed;
-    text-decoration: none;
-    right: 12px;
-  }
-  #addon-author:hover { background: #E28699; border-color: #E28699; }
 
   /* Multi-note */
   #list-trigger {
@@ -227,8 +212,7 @@
     <span></span>
   </label>
   <textarea id="note-content" placeholder="write some notes..."></textarea>
-  <div id="mode-switcher" data-current="day"></div>
+  <div id="mode-switcher" data-current="night"></div>
   <span id="status"></span>
-  <a id="addon-author" href="https://github.com/wildskyf">WS</a>
 </body>
 </html>
